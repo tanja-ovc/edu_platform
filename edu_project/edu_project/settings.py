@@ -10,7 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv("SECRET_KEY", "like-and-subscribe")
 
-DEBUG = os.getenv("DEBUG", True) == "True"
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
