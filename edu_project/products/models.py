@@ -1,3 +1,5 @@
+import datetime as dt
+
 from django.contrib.auth import get_user_model
 from django.core.exceptions import ValidationError
 from django.db import models
@@ -80,4 +82,8 @@ class LessonWatchData(models.Model):
         if self.time_watched > associated_lesson.length:
             raise ValidationError(
                 "Время просмотра не может превышать продолжительность урока."
+            )
+        if self.last_watched > dt.datetime.now().date():
+            raise ValidationError(
+                "День последнего просмотра урока не может быть позже сегодняшнего."
             )
