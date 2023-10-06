@@ -60,9 +60,9 @@ Python 3.10.7, Django 4.2, Django REST Framework 3.14
 
   ```http://127.0.0.1:8000/api-token-auth/```
 
-  Пользователь вводит логин и пароль, в ответ получает токен, который потом указывает в хедере запроса, требующего авторизации. Формат хедера:
+  Пользователь вводит логин и пароль, в ответ получает токен, который потом указывает в хедере запроса, требующего авторизации. Формат хедера - Authorization (key), Token baf131ed2c2cc3333b65f876e6ce56a951ab908e (value):
 
-  <img width="517" alt="Screenshot 2023-10-06 at 03 09 09" src="https://github.com/tanja-ovc/edu_platform/assets/85249138/55baa3ff-b756-4e5f-ab84-c9814b6790da">
+  <img width="528" alt="Auth header" src="https://github.com/tanja-ovc/edu_platform/assets/85249138/33ad1cd7-ecb9-4152-bdf6-6fcea86bd191">
 
 
 - Эндпоинт для получения информации обо всех уроках из всех продуктов, купленных пользователем:
@@ -73,8 +73,7 @@ Python 3.10.7, Django 4.2, Django REST Framework 3.14
 
   Формат ответа:
 
-  <img width="379" alt="Screenshot 2023-10-06 at 03 26 58" src="https://github.com/tanja-ovc/edu_platform/assets/85249138/513cfb40-25fd-4a6a-b0fc-f88e003e7fa5">
-
+  <img width="400" alt="my-lessons" src="https://github.com/tanja-ovc/edu_platform/assets/85249138/1933c238-6e86-4654-88d5-c803eec3e567">
 
 
   Эндпоинт модифицируется параметром _product_ для получения информации обо всех уроках только одного конкретного продукта, купленного пользователем (указывается id продукта):
@@ -85,8 +84,7 @@ Python 3.10.7, Django 4.2, Django REST Framework 3.14
 
   Формат ответа:
 
-  <img width="374" alt="Screenshot 2023-10-06 at 03 25 21" src="https://github.com/tanja-ovc/edu_platform/assets/85249138/8de1e2e1-a38d-48b2-9d8b-67d1fb5175a8">
-
+  <img width="389" alt="my-lessons-params" src="https://github.com/tanja-ovc/edu_platform/assets/85249138/48f9a019-747a-4dd3-8432-93af0b3ea72d">
 
 
 - Эндпоинт для получения информации обо всех продуктах на платформе:
@@ -97,7 +95,7 @@ Python 3.10.7, Django 4.2, Django REST Framework 3.14
 
   Формат ответа:
 
-  <img width="389" alt="Screenshot 2023-10-06 at 03 30 10" src="https://github.com/tanja-ovc/edu_platform/assets/85249138/233bed03-bfc9-49b1-a9ac-2d3d5d154902">
+  <img width="393" alt="product-stats" src="https://github.com/tanja-ovc/edu_platform/assets/85249138/3d1b0885-9909-4ec5-b29b-a3f7ca4203cd">
 
 
 По всем эндпоинтам (кроме получения токена) подразумевается только получение данных. Логика создания сущностей и налаживания связей между ними в коде не прописана.
